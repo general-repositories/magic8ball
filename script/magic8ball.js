@@ -7,18 +7,33 @@ function ask()
     
     pickAnswer(randNumber, question);
     
-    // randNumber = 1;
+    // randNumber = 4;
     
     document.getElementById("answer").innerHTML = `${pickAnswer(randNumber, question)}`;
 
     console.log(randNumber);
 }
 
+function checkQuestion(num, question)
+{
+    if (num === 4)
+    {
+        return ++num;
+    }
+    if (question === "What's your favorite color?")
+    {
+        return 4;
+    }
+    else
+    {
+        return num;
+    }
+}
+
 function pickAnswer(finalNum, question)
 {
-    checkQuestion(finalNum, question);
 
-    switch (finalNum)
+    switch (checkQuestion(finalNum, question))
     {
         case 0:
             return "This is a sign. A bad sign.";
