@@ -4,110 +4,85 @@ function ask()
 
     let randNumber = Math.floor(Math.random() * 31);
 
-    console.log(randNumber);
-
+    
     pickAnswer(randNumber, question);
+    
+    // randNumber = 1;
+    
+    document.getElementById("answer").innerHTML = `${pickAnswer(randNumber, question)}`;
+
+    console.log(randNumber);
 }
 
 function pickAnswer(finalNum, question)
 {
+    checkQuestion(finalNum, question);
+
     switch (finalNum)
     {
         case 0:
-            document.getElementById("answer").innerHTML = "This is a sign. A bad sign.";
-            break
+            return "This is a sign. A bad sign.";
         case 1:
-            document.getElementById("answer").innerHTML = "Can you rephrase that?";
-            break;
+            return "Can you rephrase that?";
         case 2:
-            document.getElementById("answer").innerHTML = "There are is more than 1";
-            break
+            return "There are is more than 1";
         case 3:
-            document.getElementById("answer").innerHTML = "Ask three more times";
-            break
+            return "Ask three more times";
         case 4:
-            document.getElementById("answer").innerHTML = "Blue";
-            break
+            return "Blue";
         case 5:
-            document.getElementById("answer").innerHTML = "Purple";
-            break
+            return "Purple";
         case 6:
-            document.getElementById("answer").innerHTML = "Red";
-            break
+            return "Red";
         case 7:
-            document.getElementById("answer").innerHTML = "What is your favorite color?";
-            break
+            return "What is your favorite color?";
         case 8:
-            document.getElementById("answer").innerHTML = "Toyota";
-            break
+            return "Toyota";
         case 9:
-            document.getElementById("answer").innerHTML = "BMW";
-            break
+            return "BMW";
         case 10:
-            document.getElementById("answer").innerHTML = "Don't Blink.";
-            break
+            return "Don't Blink.";
         case 11:
-            document.getElementById("answer").innerHTML = "I'm behind you";
-            break
+            return "I'm behind you";
         case 12:
-            document.getElementById("answer").innerHTML = "Just kidding xD";
-            break
+            return "Just kidding xD";
         case 13:
-            document.getElementById("answer").innerHTML = "It's under your keyboard";
-            break
+            return "It's under your keyboard";
         case 14:
-            document.getElementById("answer").innerHTML = "Take a deep breath";
-            break
+            return "Take a deep breath";
         case 15:
-            document.getElementById("answer").innerHTML = "Ask again later";
-            break
+            return "Ask again later";
         case 16:
-            document.getElementById("answer").innerHTML = "Yes";
-            break
+            return "Yes";
         case 17:
-            document.getElementById("answer").innerHTML = "No";
-            break
+            return "No";
         case 18:
-            document.getElementById("answer").innerHTML = "In the fridge";
-            break
+            return "In the fridge";
         case 19:
-            document.getElementById("answer").innerHTML = "I am hungry";
-            break
+            return "I am hungry";
         case 20:
-            document.getElementById("answer").innerHTML = "Don't google that.";
-            break
+            return "Don't google that.";
         case 21:
-            document.getElementById("answer").innerHTML = "You're about to drop your phone";
-            break
+            return "You're about to drop your phone";
         case 22:
-            document.getElementById("answer").innerHTML = "Omg are you serious?";
-            break
+            return "Omg are you serious?";
         case 23:
-            document.getElementById("answer").innerHTML = "Leave town.";
-            break
+            return "Leave town.";
         case 24:
-            document.getElementById("answer").innerHTML = "CPP is better than JS";
-            break
+            return "CPP is better than JS";
         case 25:
-            document.getElementById("answer").innerHTML = "Watch out for bears";
-            break
+            return "Watch out for bears";
         case 26:
-            document.getElementById("answer").innerHTML = "Bigfoot is real";
-            break
+            return "Bigfoot is real";
         case 27:
-            document.getElementById("answer").innerHTML = "That is not a good friend";
-            break
+            return "That is not a good friend";
         case 28:
-            document.getElementById("answer").innerHTML = "That is a good friend";
-            break
+            return "That is a good friend";
         case 29:
-            document.getElementById("answer").innerHTML = "Send it";
-            break
+            return "Send it";
         case 30:
-            document.getElementById("answer").innerHTML = "FUCKING SEND IT!!!";
-            break
+            return "FUCKING SEND IT!!!";
         default:
-            document.getElementById("error");
-            break
+            return "error";
     }
 }
