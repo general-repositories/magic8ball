@@ -1,32 +1,17 @@
-function getInput()
+function ask()
 {
     let question = document.getElementById("question").value;
-
-    document.getElementById("answer").innerHTML = `${question}`;
 
     let randNumber = Math.floor(Math.random() * 31);
 
     console.log(randNumber);
 
-    findAnswer(randNumber, question);
+    pickAnswer(randNumber, question);
 }
 
-function findAnswer(rNum, question)
+function pickAnswer(finalNum, question)
 {
-    let finalNumber;
-    if (question === "what is your favorite color")
-    {
-        console.log("blue");
-    }
-
-    // finalNumber = 0;
-    finalNumber = rNum;
-    pickAnswer(finalNumber);
-}
-
-function pickAnswer(fNum)
-{
-    switch (fNum)
+    switch (finalNum)
     {
         case 0:
             document.getElementById("answer").innerHTML = "This is a sign. A bad sign.";
