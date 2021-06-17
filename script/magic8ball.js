@@ -7,7 +7,7 @@ function ask()
     
     pickAnswer(randNumber, question);
     
-    // randNumber = 4;
+    randNumber = 10;
     
     document.getElementById("answer").innerHTML = `${pickAnswer(randNumber, question)}`;
 
@@ -19,6 +19,10 @@ function checkQuestion(num, question)
     if (num === 4)
     {
         return ++num;
+    }
+    if (num === 10)
+    {
+        return checkQuestion(num - Math.floor(Math.random() * 10) + 2, question);
     }
     if (question === "What's your favorite color?")
     {
@@ -32,6 +36,7 @@ function checkQuestion(num, question)
 
 function pickAnswer(finalNum, question)
 {
+    console.log(finalNum);
 
     switch (checkQuestion(finalNum, question))
     {
