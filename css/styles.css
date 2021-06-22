@@ -66,9 +66,14 @@
 .interface
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
     grid-area: interface;
+}
+
+.interface button
+{
+    margin-left: 20px;
 }
 
 .header
