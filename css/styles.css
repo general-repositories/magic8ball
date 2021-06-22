@@ -58,6 +58,11 @@
 
 }
 
+.eight-ball h1
+{
+    text-shadow: blue 1px 2px;
+}
+
 .interface
 {
     display: flex;
