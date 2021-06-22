@@ -9,11 +9,21 @@
     <title>Document</title>
 </head>
 <body>
-    <input id="question" type="text">
-    <button type="button" onclick="ask()">Ask</button>
 
-    <h1 id="answer">Answers...</h1>
+    <div class="grid-container">
 
+        <div class="eight-ball">
+            <h1 id="answer">Answers...</h1>
+        </div>
+
+        <div class="interface">
+            <input id="question" type="text">
+            <button type="button" onclick="ask()">Ask</button>
+        </div>
+
+    </div>
+
+    <script src="./script/answers.js"></script>
     <script src="./script/magic8ball.js"></script>
 </body>
 </html>
