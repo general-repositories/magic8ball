@@ -23,12 +23,33 @@
         ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
         ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
         ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . . . . . . . . . . ."
         ". . header header header header header header header header . ."
         ". . . interface interface interface interface interface interface . . ."
-        ". . . interface interface interface interface interface interface . . ."
         ;
-
+        
     height: 90vh;
+}
+
+@media only screen and (max-width: 500px)
+{
+    .grid-container
+    {
+        grid-template-areas: 
+        ". . . . . . . . . . . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball eight-ball . ."
+        ". . header header header header header header header header . ."
+        ". interface interface interface interface . . . . . . ."
+        ". interface interface interface interface . . . . . . ."
+        ;
+    }
 }
 
 .eight-ball-cell
@@ -55,7 +76,15 @@
     /* background-color: blue; */
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,0.5046393557422969) 0%, rgba(0,0,0,1) 100%);
-
+}
+@media only screen and (max-width: 500px)
+{
+    .eight-ball
+    {
+        height: 150px;
+        width: 150px;
+        font-size: .7rem;
+    }
 }
 
 .eight-ball h1
