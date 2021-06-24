@@ -1,8 +1,8 @@
 function ask()
 {
-    let question = document.getElementById("question").value;
+    const question = document.getElementById("question").value;
 
-    let randNumber = Math.floor(Math.random() * 31);
+    const randNumber = Math.floor(Math.random() * 31);
 
     if (!isHardCoded(question))
     {
