@@ -1,14 +1,28 @@
+let lastQuestion;
+let lastAnswer;
+
 function ask()
 {
     const question = document.getElementById("question").value;
 
     const randNumber = Math.floor(Math.random() * 31);
 
-    if (!isHardCoded(question))
+    if (lastQuestion === question)
     {
-        document.getElementById("answer").innerHTML = `${answers[randNumber]}`;
+        document.getElementById("answer").innerHTML = `${answers[lastAnswer]}`;
+        document.getElementById("title").innerHTML = "Ask a new question!"
     }
-    
+    else
+    {
+        document.getElementById("title").innerHTML = "Ask me anything!"
+        if (!isHardCoded(question))
+        {
+            document.getElementById("answer").innerHTML = `${answers[randNumber]}`;
+            lastQuestion = question;
+            lastAnswer = randNumber;
+        }
+    }
+
 }
 
 function isHardCoded(question)
